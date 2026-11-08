@@ -1,0 +1,33 @@
+[project]
+name = "tds"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Abdullah Amjad", email = "shkabdullah268@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.162.0",
+    "openpyxl>=3.1.5",
+    "pandas>=3.1.1",
+    "psycopg[binary]>=3.3.8",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.2",
+    "sqlalchemy>=2.1.8",
+    "sqlglot>=30.29.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+tds = "tds:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=9.2.0",
+]
